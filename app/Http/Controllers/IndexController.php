@@ -20,6 +20,6 @@ class IndexController extends Controller
                                         'data2'=>43,
                                         'data3'=>56];
 
-                return view('index.index1')->with('viewData',$viewData);
+                return view('layouts.index2')->with('viewData',$viewData);
         }
 }

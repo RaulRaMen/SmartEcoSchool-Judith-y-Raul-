@@ -30,7 +30,9 @@
         <h2>SmartEcoSchool</h2>
     </footer>
     
-    
+   
+
+
 </body>
 
 </html>
