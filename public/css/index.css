@@ -1,22 +1,19 @@
 
-body{
-
-    background-color: rgb(128, 187, 221);
-
+*{
+    margin: 0;
+    padding: 0;
 }
-
+body{
+    background-color: rgb(128, 187, 221);
+}
 header{
-
     background-color: rgb(35, 140, 182);
     width: 80%;
     border-radius: 2em;
     border: solid 3px black;
     margin-inline-start: 12em;
-  
 }
-
 h1{
-
     text-align: center;
     font-size: 6em;
     font-family:fantasy;
@@ -24,13 +21,8 @@ h1{
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: black;
     text-shadow: 5px 1px 2px rgb(0, 0, 0);
-   
 }
-
-
-
 p{
-    
     text-shadow: 5px 1px 2px rgb(0, 0, 0);
     color: aliceblue;
     text-align: center;
@@ -39,10 +31,8 @@ p{
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: black;
 }
-
 footer
 {
-
     height:70px;
     line-height:50px;
     background-color: rgb(35, 140, 182);
@@ -55,27 +45,28 @@ footer
     font-family:fantasy;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-
 }
-
-
 img{
-
-
     width: 4%;
     height: 70%;
     margin-top:8px;
     margin-right: 105em;
-
-
 }
-
 h2{
-
 margin-top: -2.7em;
-
 }
 
 ::-webkit-scrollbar {
     display: none;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.center{
+    width: 100vw;
+}
+.two-graphs{
+    width: 50vw;
+    margin: 0 auto;
 }

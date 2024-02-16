@@ -1,6 +1,6 @@
 @extends('layouts.index2')
 
-
+@section('graph')
 <script type="text/javascript">
 
 

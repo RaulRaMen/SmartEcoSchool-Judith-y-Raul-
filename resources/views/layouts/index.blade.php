@@ -14,14 +14,18 @@
         <h1>SmartEcoSchool</h1>
     </header>
     
-    <main>
-        <div>
+    <main class="main">
+        <div class="center">
+            <h1>@yield('graphTitle')</h1>
             @yield('text')
         </div>
 
-        <div>
-            <h1>@yield('graphTitle')</h1>
+        <div class="two-graphs">
             @yield('graph')
+        </div>
+
+        <div class="two-graphs">
+            @yield('graph2')
         </div>
     </main>
 
@@ -29,10 +33,6 @@
         <img src="{{asset('/img/logoRincon.png')}}"></img>
         <h2>SmartEcoSchool</h2>
     </footer>
-    
-   
-
-
 </body>
 
 </html>

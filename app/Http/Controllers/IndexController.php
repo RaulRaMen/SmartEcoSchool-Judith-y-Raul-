@@ -1,25 +1,29 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
         public function index(){
                 $viewData = [];
-                $viewData['graphTitle'] = 'Prueba';
-                $viewData['text'] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat libero et 
-                        urna pretium, ut tempor ex sagittis. Nunc in sollicitudin eros. Ut vel nisi non nisl interdum accumsan. 
-                        Phasellus eget nisl ac nisi venenatis feugiat quis at augue. Maecenas porta ac dui eget euismod. 
-                        Mauris auctor iaculis neque, sed sodales est. Sed sodales elementum dui ut malesuada.';
+                $viewData['graphsTitle'] = 'Prueba';
+                $viewData['text'] = '';
 
+                $query = DB::select("SELECT consumo FROM measurements WHERE id_sensor = 1 ORDER BY fecha DESC LIMIT 3;");
+                $viewData['graph'] = ['title'=>'Sensor 1',
+                                        'data'=>$query[2]->consumo,
+                                        'data2'=>$query[1]->consumo,
+                                        'data3'=>$query[0]->consumo];
 
-                $viewData['graph'] = ['title'=>'Comidas',
-                                        'data'=>25,
-                                        'data2'=>43,
-                                        'data3'=>56];
+                $query = DB::select("SELECT consumo FROM measurements WHERE id_sensor = 2 ORDER BY fecha DESC LIMIT 3;");
+                $viewData['graph2'] = ['title'=>'Sensor 2',
+                                        'data'=>$query[2]->consumo,
+                                        'data2'=>$query[1]->consumo,
+                                        'data3'=>$query[0]->consumo];
 
-                return view('layouts.index2')->with('viewData',$viewData);
+                return view('index.index1')->with('viewData',$viewData);
         }
 }
