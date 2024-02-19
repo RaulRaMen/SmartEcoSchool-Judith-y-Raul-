@@ -23,7 +23,6 @@ class IndexController extends Controller
                                         'data'=>$query[2]->consumo,
                                         'data2'=>$query[1]->consumo,
                                         'data3'=>$query[0]->consumo];
-
-                return view('index.index1')->with('viewData',$viewData);
+                return view('index.index2');
         }
 }

@@ -13,5 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', "App\Http\Controllers\indexController@index")->name("home.index");
-
+Route::get('/{id}', "App\Http\Controllers\indexController@Index")->name("home.Index");

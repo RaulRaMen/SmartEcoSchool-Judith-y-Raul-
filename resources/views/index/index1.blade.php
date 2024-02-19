@@ -19,8 +19,8 @@
             greenFrom: 0, greenTo: 50,
             redFrom: 85, redTo: 100,
             yellowFrom:50, yellowTo: 90,
-            minorTicks: 5,max:1370000,
-            min:1350000,
+            minorTicks: 5,max:13299000,
+            min:13298000,
             animation:{
                 duration: 600,
                 easing: 'inAndOut'},
@@ -62,8 +62,8 @@
             greenFrom: 0, greenTo: 50,
             redFrom: 85, redTo: 100,
             yellowFrom:50, yellowTo: 90,
-            minorTicks: 5,max:5470000,
-            min:5450000,
+            minorTicks: 5,max:53710000,
+            min:53695000,
             animation:{
                 duration: 600,
                 easing: 'inAndOut'},
