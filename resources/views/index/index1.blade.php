@@ -13,7 +13,7 @@
             ['Label', 'Value'],
             ["{{$viewData['graph']['title']}}", {{$viewData['graph']['data']}}],
         ]);
-
+        
         let options = {
             width: 500,
             greenFrom: 0, greenTo: 50,

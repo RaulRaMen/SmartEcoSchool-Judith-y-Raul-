@@ -10,42 +10,62 @@
 
       function drawChart () {
 
-        var data = new google.visualization.DataTable();
+        let data = new google.visualization.DataTable();
         data.addColumn('number', 'Hours Studied');
+        //data.addColumn('timeofday', 'Hours Studied');
         data.addColumn('number', 'Final');
 
         data.addRows([
-          [0, 67], [1, 88], [2, 77],
-          [3, 93], [4, 85], [5, 91],
-          [6, 71], [7, 78], [8, 93],
-          [9, 80], [10, 82],[0, 75],
-          [5, 80], [3, 90], [1, 72],
-          [5, 75], [6, 68], [7, 98],
-          [3, 82], [9, 94], [2, 79],
-          [2, 95], [2, 86], [3, 67],
-          [4, 60], [2, 80], [6, 92],
-          [2, 81], [8, 79], [9, 83],
-          [3, 75], [1, 80], [3, 71],
-          [3, 89], [4, 92], [5, 85],
-          [6, 92], [7, 78], [6, 95],
-          [3, 81], [0, 64], [4, 85],
-          [2, 83], [3, 96], [4, 77],
-          [5, 89], [4, 89], [7, 84],
-          [4, 92], [9, 98]
+          [{{$viewData['graph']['data'][0][0]}},{{$viewData['graph']['data'][0][1]}}],[{{$viewData['graph']['data'][1][0]}},{{$viewData['graph']['data'][1][1]}}],[{{$viewData['graph']['data'][2][0]}},{{$viewData['graph']['data'][2][1]}}],
+          [{{$viewData['graph']['data'][3][0]}},{{$viewData['graph']['data'][3][1]}}],[{{$viewData['graph']['data'][4][0]}},{{$viewData['graph']['data'][4][1]}}],[{{$viewData['graph']['data'][5][0]}},{{$viewData['graph']['data'][5][1]}}],
+          [{{$viewData['graph']['data'][6][0]}},{{$viewData['graph']['data'][6][1]}}],[{{$viewData['graph']['data'][7][0]}},{{$viewData['graph']['data'][7][1]}}],[{{$viewData['graph']['data'][8][0]}},{{$viewData['graph']['data'][8][1]}}],
+          [{{$viewData['graph']['data'][9][0]}},{{$viewData['graph']['data'][9][1]}}],[{{$viewData['graph']['data'][10][0]}},{{$viewData['graph']['data'][10][1]}}],[{{$viewData['graph']['data'][11][0]}},{{$viewData['graph']['data'][11][1]}}],
+          [{{$viewData['graph']['data'][12][0]}},{{$viewData['graph']['data'][12][1]}}],[{{$viewData['graph']['data'][13][0]}},{{$viewData['graph']['data'][13][1]}}],[{{$viewData['graph']['data'][14][0]}},{{$viewData['graph']['data'][14][1]}}],
+          [{{$viewData['graph']['data'][15][0]}},{{$viewData['graph']['data'][15][1]}}],[{{$viewData['graph']['data'][16][0]}},{{$viewData['graph']['data'][16][1]}}],[{{$viewData['graph']['data'][17][0]}},{{$viewData['graph']['data'][17][1]}}],
+          [{{$viewData['graph']['data'][18][0]}},{{$viewData['graph']['data'][18][1]}}],[{{$viewData['graph']['data'][19][0]}},{{$viewData['graph']['data'][19][1]}}],[{{$viewData['graph']['data'][20][0]}},{{$viewData['graph']['data'][20][1]}}],
+          [{{$viewData['graph']['data'][21][0]}},{{$viewData['graph']['data'][21][1]}}],[{{$viewData['graph']['data'][22][0]}},{{$viewData['graph']['data'][22][1]}}],[{{$viewData['graph']['data'][23][0]}},{{$viewData['graph']['data'][23][1]}}],
+          [{{$viewData['graph']['data'][24][0]}},{{$viewData['graph']['data'][24][1]}}],[{{$viewData['graph']['data'][25][0]}},{{$viewData['graph']['data'][25][1]}}],[{{$viewData['graph']['data'][26][0]}},{{$viewData['graph']['data'][26][1]}}],
+          [{{$viewData['graph']['data'][27][0]}},{{$viewData['graph']['data'][27][1]}}],[{{$viewData['graph']['data'][28][0]}},{{$viewData['graph']['data'][28][1]}}],[{{$viewData['graph']['data'][29][0]}},{{$viewData['graph']['data'][29][1]}}],
+          [{{$viewData['graph']['data'][30][0]}},{{$viewData['graph']['data'][30][1]}}],[{{$viewData['graph']['data'][31][0]}},{{$viewData['graph']['data'][31][1]}}],[{{$viewData['graph']['data'][32][0]}},{{$viewData['graph']['data'][32][1]}}],
+          [{{$viewData['graph']['data'][33][0]}},{{$viewData['graph']['data'][33][1]}}],[{{$viewData['graph']['data'][34][0]}},{{$viewData['graph']['data'][34][1]}}],[{{$viewData['graph']['data'][35][0]}},{{$viewData['graph']['data'][35][1]}}],
+          [{{$viewData['graph']['data'][36][0]}},{{$viewData['graph']['data'][36][1]}}],[{{$viewData['graph']['data'][37][0]}},{{$viewData['graph']['data'][37][1]}}],[{{$viewData['graph']['data'][38][0]}},{{$viewData['graph']['data'][38][1]}}],
+          [{{$viewData['graph']['data'][39][0]}},{{$viewData['graph']['data'][39][1]}}],[{{$viewData['graph']['data'][40][0]}},{{$viewData['graph']['data'][40][1]}}],[{{$viewData['graph']['data'][41][0]}},{{$viewData['graph']['data'][41][1]}}],
+          [{{$viewData['graph']['data'][42][0]}},{{$viewData['graph']['data'][42][1]}}],[{{$viewData['graph']['data'][43][0]}},{{$viewData['graph']['data'][43][1]}}],[{{$viewData['graph']['data'][44][0]}},{{$viewData['graph']['data'][44][1]}}],
+          [{{$viewData['graph']['data'][45][0]}},{{$viewData['graph']['data'][45][1]}}],[{{$viewData['graph']['data'][46][0]}},{{$viewData['graph']['data'][46][1]}}],[{{$viewData['graph']['data'][47][0]}},{{$viewData['graph']['data'][47][1]}}],
+          [{{$viewData['graph']['data'][48][0]}},{{$viewData['graph']['data'][48][1]}}],[{{$viewData['graph']['data'][49][0]}},{{$viewData['graph']['data'][49][1]}}],[{{$viewData['graph']['data'][50][0]}},{{$viewData['graph']['data'][50][1]}}],
+          
+          [{{$viewData['graph']['data'][51][0]}},{{$viewData['graph']['data'][51][1]}}],[{{$viewData['graph']['data'][52][0]}},{{$viewData['graph']['data'][52][1]}}],[{{$viewData['graph']['data'][53][0]}},{{$viewData['graph']['data'][53][1]}}],
+          [{{$viewData['graph']['data'][54][0]}},{{$viewData['graph']['data'][54][1]}}],[{{$viewData['graph']['data'][55][0]}},{{$viewData['graph']['data'][55][1]}}],[{{$viewData['graph']['data'][56][0]}},{{$viewData['graph']['data'][56][1]}}],
+          [{{$viewData['graph']['data'][57][0]}},{{$viewData['graph']['data'][57][1]}}],[{{$viewData['graph']['data'][58][0]}},{{$viewData['graph']['data'][58][1]}}],[{{$viewData['graph']['data'][59][0]}},{{$viewData['graph']['data'][59][1]}}],
+          [{{$viewData['graph']['data'][60][0]}},{{$viewData['graph']['data'][60][1]}}],[{{$viewData['graph']['data'][61][0]}},{{$viewData['graph']['data'][61][1]}}],[{{$viewData['graph']['data'][62][0]}},{{$viewData['graph']['data'][62][1]}}],
+          [{{$viewData['graph']['data'][63][0]}},{{$viewData['graph']['data'][63][1]}}],[{{$viewData['graph']['data'][64][0]}},{{$viewData['graph']['data'][64][1]}}],[{{$viewData['graph']['data'][65][0]}},{{$viewData['graph']['data'][65][1]}}],
+          [{{$viewData['graph']['data'][66][0]}},{{$viewData['graph']['data'][66][1]}}],[{{$viewData['graph']['data'][67][0]}},{{$viewData['graph']['data'][67][1]}}],[{{$viewData['graph']['data'][68][0]}},{{$viewData['graph']['data'][68][1]}}],
+          [{{$viewData['graph']['data'][69][0]}},{{$viewData['graph']['data'][69][1]}}],[{{$viewData['graph']['data'][70][0]}},{{$viewData['graph']['data'][70][1]}}],[{{$viewData['graph']['data'][71][0]}},{{$viewData['graph']['data'][71][1]}}],
+          [{{$viewData['graph']['data'][72][0]}},{{$viewData['graph']['data'][72][1]}}],[{{$viewData['graph']['data'][73][0]}},{{$viewData['graph']['data'][73][1]}}],[{{$viewData['graph']['data'][74][0]}},{{$viewData['graph']['data'][74][1]}}],
+          [{{$viewData['graph']['data'][75][0]}},{{$viewData['graph']['data'][75][1]}}],[{{$viewData['graph']['data'][76][0]}},{{$viewData['graph']['data'][76][1]}}],[{{$viewData['graph']['data'][77][0]}},{{$viewData['graph']['data'][77][1]}}],
+          [{{$viewData['graph']['data'][78][0]}},{{$viewData['graph']['data'][78][1]}}],[{{$viewData['graph']['data'][79][0]}},{{$viewData['graph']['data'][79][1]}}],[{{$viewData['graph']['data'][80][0]}},{{$viewData['graph']['data'][80][1]}}],
+          [{{$viewData['graph']['data'][81][0]}},{{$viewData['graph']['data'][81][1]}}],[{{$viewData['graph']['data'][82][0]}},{{$viewData['graph']['data'][82][1]}}],[{{$viewData['graph']['data'][83][0]}},{{$viewData['graph']['data'][83][1]}}],
+          [{{$viewData['graph']['data'][84][0]}},{{$viewData['graph']['data'][84][1]}}],[{{$viewData['graph']['data'][85][0]}},{{$viewData['graph']['data'][85][1]}}],[{{$viewData['graph']['data'][86][0]}},{{$viewData['graph']['data'][86][1]}}],
+          [{{$viewData['graph']['data'][87][0]}},{{$viewData['graph']['data'][87][1]}}],[{{$viewData['graph']['data'][88][0]}},{{$viewData['graph']['data'][88][1]}}],[{{$viewData['graph']['data'][89][0]}},{{$viewData['graph']['data'][89][1]}}],
+          [{{$viewData['graph']['data'][90][0]}},{{$viewData['graph']['data'][90][1]}}],[{{$viewData['graph']['data'][91][0]}},{{$viewData['graph']['data'][91][1]}}],[{{$viewData['graph']['data'][92][0]}},{{$viewData['graph']['data'][92][1]}}],
+          [{{$viewData['graph']['data'][93][0]}},{{$viewData['graph']['data'][93][1]}}],[{{$viewData['graph']['data'][94][0]}},{{$viewData['graph']['data'][94][1]}}],[{{$viewData['graph']['data'][95][0]}},{{$viewData['graph']['data'][95][1]}}],
+          [{{$viewData['graph']['data'][96][0]}},{{$viewData['graph']['data'][96][1]}}],[{{$viewData['graph']['data'][97][0]}},{{$viewData['graph']['data'][97][1]}}],[{{$viewData['graph']['data'][98][0]}},{{$viewData['graph']['data'][98][1]}}],
+          [{{$viewData['graph']['data'][99][0]}},{{$viewData['graph']['data'][99][1]}}],[{{$viewData['graph']['data'][100][0]}},{{$viewData['graph']['data'][100][1]}}],[{{$viewData['graph']['data'][101][0]}},{{$viewData['graph']['data'][101][1]}}]
         ]);
 
-        var options = {
+        let options = {
           width: 800,
           height: 500,
           chart: {
             title: 'Students\' Final Grades',
             subtitle: 'based on hours studied'
           },
-          hAxis: {title: 'Hours Studied'},
-          vAxis: {title: 'Grade'}
+          hAxis: {title: 'Fecha'},
+          vAxis: {title: 'Voltaje',
+                  format: 'decimal'}
         };
 
-        var chart = new google.charts.Scatter(document.getElementById('scatterchart_material'));
+        let chart = new google.charts.Scatter(document.getElementById('scatterchart_material'));
 
         chart.draw(data, google.charts.Scatter.convertOptions(options));
       }

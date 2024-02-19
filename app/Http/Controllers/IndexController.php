@@ -31,12 +31,13 @@ class IndexController extends Controller
                         case 2:
                                 $viewData['graphsTitle'] = 'Electricidad';
                                 $viewData['text'] = 'Estamos en el index 2';
-                                $query = DB::select("SELECT consumo,fecha FROM measurements WHERE id_sensor = 2 ORDER BY fecha DESC LIMIT 100;");
-                                $datos[] = ['Fecha','Watios'];
+                                $query = DB::select("SELECT consumo,fecha FROM measurements WHERE id_sensor = 2 ORDER BY fecha DESC LIMIT 102;");
                                 foreach ($query as $data){
-                                        $datos[] = [$data->fecha,$data->consumo];
+                                        $viewData['graph']['data'][] = [str_replace("-","",explode(" ",$data->fecha)[0]),$data->consumo];
+                                        /*$fecha=explode(" ",$data->fecha)[0];
+                                        $fecha = explode("-",$fecha);
+                                        $viewData['graph']['data'][] = [[$fecha[2],$fecha[1],$fecha[0]],$data->consumo];*/
                                 }
-                                $viewData['graph'] = $datos;
                                 break;
                                 
                         
