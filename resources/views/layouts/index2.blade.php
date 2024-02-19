@@ -8,9 +8,8 @@
     <title>Electrico</title>
 </head>
 
-<body>
+<body class="bodyElect">
     <header class="headerElect">
-
         <h1 class="tituloElect">SmartEcoSchool</h1>
     </header>
 
@@ -19,14 +18,14 @@
             <h1>@yield('graphTitle')</h1>
             @yield('text')
         </div>
-
-        <div class="two-graphs">
-
+    
+        <div >
+            @yield('graph')
         </div>
 
     </main>
 
-    <footer>
+    <footer class="pieElect">
         <img src="{{asset('/img/logoRincon.png')}}"></img>
         <h2>SmartEcoSchool</h2>
     </footer>

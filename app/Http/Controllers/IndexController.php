@@ -31,6 +31,12 @@ class IndexController extends Controller
                         case 2:
                                 $viewData['graphsTitle'] = 'Electricidad';
                                 $viewData['text'] = 'Estamos en el index 2';
+                                $query = DB::select("SELECT consumo,fecha FROM measurements WHERE id_sensor = 2 ORDER BY fecha DESC LIMIT 100;");
+                                $datos[] = ['Fecha','Watios'];
+                                foreach ($query as $data){
+                                        $datos[] = [$data->fecha,$data->consumo];
+                                }
+                                $viewData['graph'] = $datos;
                                 break;
                                 
                         

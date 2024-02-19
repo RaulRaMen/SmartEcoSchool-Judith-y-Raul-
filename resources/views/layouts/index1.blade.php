@@ -9,7 +9,6 @@
 </head>
 
 <body class="bodyagua">
-
     <header class="headerAgua">
         <h1 class ="tituloAgua">SmartEcoSchool</h1>
     </header>
