@@ -21,8 +21,12 @@
         <h1 class="tituloElect">SmartEcoSchool</h1>
     </header>
 
+  
     
-    
+    <footer class="pieElect">
+        <img src="{{asset('/img/logoRincon.png')}}"></img>
+        <h2>SmartEcoSchool</h2>
+    </footer>
 
 
 
