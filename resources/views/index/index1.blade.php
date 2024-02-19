@@ -1,4 +1,4 @@
-@extends('layouts.index')
+@extends('layouts.index1')
 @section('graphTitle',$viewData['graphsTitle'])
 @yield('text',$viewData['text'])
 
@@ -76,7 +76,7 @@
         
         setInterval(function() {
         data.setValue(0, 1,{{$viewData['graph2']['data2']}});
-        chart.draw(data, options);
+        chart.draw(data, options);  
         }, 5000);
 
         setInterval(function() {

@@ -13,4 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{id}', "App\Http\Controllers\indexController@Index")->name("home.Index");
+Route::get('/index/{id}', "App\Http\Controllers\indexController@index")->name("home.Index");
+
+Route::get('/admin', "App\Http\Controllers\adminController@index")->name("home.Admin");
