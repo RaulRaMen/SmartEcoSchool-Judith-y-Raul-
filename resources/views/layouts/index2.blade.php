@@ -8,6 +8,14 @@
     <title>mapa</title>
 </head>
 
+    <body>
+<script type="text/javascript">
+
+    let canvasLightning = function(c, cw, ch){
+
+    this.init = function(){
+    this.loop();
+    };    
     <body class="bodyElect">
    
    
@@ -22,14 +30,22 @@
     </header>
 
   
+    <canvas id="Rayos"></canvas>
+    <main class="main">
+        <div class="center">
+            <h1>@yield('graphTitle')</h1>
+            @yield('text')
+        </div>
     
-    <footer class="pieElect">
+        <div class="two-graphs">
+        </div>
+
+    </main>
+
+<footer class="pieElect">
         <img src="{{asset('/img/logoRincon.png')}}"></img>
         <h2>SmartEcoSchool</h2>
     </footer>
-
-
-
 
 </body>
 </html>

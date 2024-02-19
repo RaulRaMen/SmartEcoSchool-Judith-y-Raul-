@@ -1,5 +1,3 @@
 @extends('layouts.index2')
-
-@section('graph')
-
-@endsection
+@section('graphTitle',$viewData['graphsTitle'])
+@yield('text',$viewData['text'])
