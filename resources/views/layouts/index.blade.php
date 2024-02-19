@@ -8,10 +8,10 @@
     <title>Interfaz</title>
 </head>
 
-<body>
+<body class="bodyagua">
 
-    <header>
-        <h1>SmartEcoSchool</h1>
+    <header class="headerAgua">
+        <h1 class ="tituloAgua">SmartEcoSchool</h1>
     </header>
     
     <main class="main">
