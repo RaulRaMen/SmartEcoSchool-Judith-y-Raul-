@@ -54,7 +54,7 @@
         ]);
 
         let options = {
-          width: 800,
+          width: 900,
           height: 500,
           chart: {
             title: 'Students\' Final Grades',

@@ -15,7 +15,7 @@
         ]);
         
         let options = {
-            width: 500,
+            width: 800,
             greenFrom: 0, greenTo: 50,
             redFrom: 85, redTo: 100,
             yellowFrom:50, yellowTo: 90,
@@ -58,7 +58,7 @@
         ]);
 
         let options = {
-            width: 500,
+            width: 999,
             greenFrom: 0, greenTo: 50,
             redFrom: 85, redTo: 100,
             yellowFrom:50, yellowTo: 90,

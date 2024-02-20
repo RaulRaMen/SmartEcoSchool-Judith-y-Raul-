@@ -19,18 +19,6 @@
             @yield('text')
         </div>
 
-        <div class="two-graphs">
-    @yield('graph')
-    <div>
-    <p class="info graphs"> Información gráfico.</p>.
-    </div>
-</div>
-
-<div class="two-graphs">
-    @yield('graph2')
-    <div>
-       <p class="info graphs"> Información gráfico.</p>
-    </div>
 </div>
     </main>
 

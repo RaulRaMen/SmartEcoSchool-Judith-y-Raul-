@@ -18,9 +18,10 @@
             <h1>@yield('graphTitle')</h1>
             @yield('text')
         </div>
-    
-        <div >
+
+        <div class="grafico2">
             @yield('graph')
+           
         </div>
 
     </main>
@@ -31,4 +32,5 @@
     </footer>
 
 </body>
+
 </html>
