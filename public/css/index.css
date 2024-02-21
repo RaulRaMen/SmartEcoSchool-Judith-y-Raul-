@@ -178,8 +178,9 @@ img {
     box-sizing: border-box; /* Incluir el padding en el ancho total */
     vertical-align: top; /* Alinear los divs en la parte superior */
     margin: 10em; /* Espacio entre los divs */
-    margin-left: 25em;
+    margin-left: 20em;
     height: auto;
+    margin-top: 2em;
    
 }
 
@@ -187,7 +188,7 @@ img {
 .info.graphs {
     text-align: center; /* Centrar el texto horizontalmente */
     margin: 0; /* Eliminar márgenes predeterminados */
-    margin-left: -3em;
+    margin-right: -6em;
 }
 
 
@@ -197,4 +198,14 @@ img {
 
 .grafico2 p {
     margin-top: 20px; /* Espacio superior para separar el texto del gráfico */
+}
+
+.texto1
+{
+
+    color: aliceblue;
+    margin-top: -3em;
+    font-size: 2em;
+
+
 }

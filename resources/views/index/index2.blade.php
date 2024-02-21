@@ -1,6 +1,6 @@
 @extends('layouts.index2')
 @section('graphTitle',$viewData['graphsTitle'])
-@yield('text',$viewData['text'])
+@section('text',$viewData['text'])
 
 @section('graph')
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -56,6 +56,7 @@
         let options = {
           width: 900,
           height: 500,
+          backgroundColor: "",
           chart: {
             title: 'Students\' Final Grades',
             subtitle: 'based on hours studied'
