@@ -12,16 +12,16 @@ class IndexController extends Controller
                 switch($id){
                         case 1:
                                 $viewData['graphsTitle'] = 'Ultimas 3 Mediciones';
-                                $viewData['text'] = 'Estamos en el index 1';
+                                $viewData['text'] = 'Gráfica de la luz y del agua';
                 
                                 $query = DB::select("SELECT consumo FROM measurements WHERE id_sensor = 1 ORDER BY fecha DESC LIMIT 3;");
-                                $viewData['graph'] = ['title'=>'Sensor 1',
+                                $viewData['graph'] = ['title'=>'Agua',
                                                         'data'=>$query[2]->consumo,
                                                         'data2'=>$query[1]->consumo,
                                                         'data3'=>$query[0]->consumo];
                 
                                 $query = DB::select("SELECT consumo FROM measurements WHERE id_sensor = 2 ORDER BY fecha DESC LIMIT 3;");
-                                $viewData['graph2'] = ['title'=>'Sensor 2',
+                                $viewData['graph2'] = ['title'=>'Luz',
                                                         'data'=>$query[2]->consumo,
                                                         'data2'=>$query[1]->consumo,
                                                         'data3'=>$query[0]->consumo];
