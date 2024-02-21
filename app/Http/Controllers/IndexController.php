@@ -25,8 +25,6 @@ class IndexController extends Controller
                                                         'data'=>$query[2]->consumo,
                                                         'data2'=>$query[1]->consumo,
                                                         'data3'=>$query[0]->consumo];
-                
-                                
                                 break;
                         case 2:
                                 $viewData['graphsTitle'] = 'Electricidad';
@@ -38,6 +36,11 @@ class IndexController extends Controller
                                         $fecha = explode("-",$fecha);
                                         $viewData['graph']['data'][] = [[$fecha[2],$fecha[1],$fecha[0]],$data->consumo];*/
                                 }
+                                break;
+                        case 3:
+                                $viewData['graphsTitle'] = 'Se ve como electricidad pero es agua';
+                                $viewData['text'] = 'Estamos en el index 3';
+                                
                                 break;
                                 
                         
