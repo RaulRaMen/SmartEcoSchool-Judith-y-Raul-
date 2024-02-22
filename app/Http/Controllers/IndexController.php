@@ -12,7 +12,7 @@ class IndexController extends Controller
                 switch($id){
                         case 1:
                                 $viewData['graphsTitle'] = 'Ultimas 3 Mediciones';
-                                $viewData['text'] = 'Gráfica de la luz y del agua';
+                                $viewData['text'] = 'Estas gráficas nos ayudan a controlar nuestro consumo y tomar medidas para usar los recursos de manera más inteligente. ';
                 
                                 $query = DB::select("SELECT consumo FROM measurements WHERE id_sensor = 1 ORDER BY fecha DESC LIMIT 3;");
                                 $viewData['graph'] = ['title'=>'Agua',
@@ -27,8 +27,8 @@ class IndexController extends Controller
                                                         'data3'=>$query[0]->consumo];
                                 break;
                         case 2:
-                                $viewData['graphsTitle'] = 'Electricidad';
-                                $viewData['text'] = 'Estamos en el index 2';
+                                $viewData['graphsTitle'] = 'Consumo de Electricidad';
+                                $viewData['text'] = 'Visualiza el consumo de electricidad por mes, ayudando a identificar tendencias para mejorar la eficiencia en su uso.';
                                 $query = DB::select("SELECT consumo,fecha FROM measurements WHERE id_sensor = 1 ORDER BY fecha DESC LIMIT 102;");
                                 foreach ($query as $data){
                                         $viewData['graph']['data'][] = [str_replace("-","",explode(" ",$data->fecha)[0]),$data->consumo];
@@ -38,8 +38,8 @@ class IndexController extends Controller
                                 }
                                 break;
                         case 3:
-                                $viewData['graphsTitle'] = 'La idea es que fuera de agua o mixta pero como no hay datos es de electricidad';
-                                $viewData['text'] = 'Estamos en el index 3';
+                                $viewData['graphsTitle'] = 'Consumo de Agua';
+                                $viewData['text'] = 'Visualiza el consumo de agua por mes para identificar tendencias y mejorar la eficiencia en su uso.';
 
                                 $query = DB::select("SELECT m.id_sensor, m.consumo, CONCAT(YEAR(m.fecha), '-', LPAD(MONTH(m.fecha), 2, '0')) AS fecha FROM measurements m INNER JOIN 
                                 (SELECT MAX(fecha) AS ultima_fecha FROM measurements WHERE id_sensor = 1 GROUP BY YEAR(fecha), MONTH(fecha)) AS ultimas_fechas 

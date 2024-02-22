@@ -53,18 +53,59 @@
           [{{$viewData['graph']['data'][99][0]}},{{$viewData['graph']['data'][99][1]}}],[{{$viewData['graph']['data'][100][0]}},{{$viewData['graph']['data'][100][1]}}],[{{$viewData['graph']['data'][101][0]}},{{$viewData['graph']['data'][101][1]}}]
         ]);
 
+
         let options = {
-          width: 900,
-          height: 500,
-          backgroundColor: "",
-          chart: {
-            title: 'Students\' Final Grades',
-            subtitle: 'based on hours studied'
-          },
-          hAxis: {title: 'Fecha'},
-          vAxis: {title: 'Voltaje',
-                  format: 'decimal'}
-        };
+  width: 1200,
+  height: 600,
+  backgroundColor: 'transparent', // Fondo transparente
+  chart: {
+    title: 'Gráfica de Voltaje Mensual',
+    subtitle: 'El Rincón',
+    titleTextStyle: {
+      color: '#333',
+      fontSize: 24,
+      bold: true
+    },
+    subtitleTextStyle: {
+      color: '#666',
+      fontSize: 18
+    }
+  },
+  vAxis: {
+    title: 'Voltaje',
+    titleTextStyle: {
+      color: '#333',
+      fontSize: 18,
+      bold: true
+    },
+    gridlines: {
+      color: '#ccc'
+    },
+    minValue: 0,
+    format: 'V' // Formato de números en el eje vertical
+  },
+  hAxis: {
+    title: 'Mes',
+    titleTextStyle: {
+      color: '#333',
+      fontSize: 18,
+      bold: true,
+      
+    },
+    textStyle: {
+      color: '#666'
+    }
+  },
+  legend: {
+    position: 'none' // No mostrar leyenda
+  },
+  colors: ['#4285F4'], // Color de la línea del gráfico
+  lineWidth: 2, // Grosor de la línea del gráfico
+  curveType: 'function' // Tipo de curva (opciones: 'none', 'function', 'linear', 'polynomial', 'exponential')
+};
+
+
+
 
         let chart = new google.charts.Scatter(document.getElementById('scatterchart_material'));
 

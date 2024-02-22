@@ -22,7 +22,7 @@
 
         
         var options = {
-          title: 'Gasto electricidad Mensual',
+          title: 'Gasto agua Mensual',
           pointSize: 10,
           curveType: 'function',
           legend: { position: 'bottom' },

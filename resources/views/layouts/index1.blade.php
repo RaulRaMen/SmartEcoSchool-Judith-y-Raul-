@@ -24,14 +24,14 @@
         <div class="two-graphs">
     @yield('graph')
     <div>
-    <p class="info graphs"> Información gráfico.</p>.
+    <p class="info graphs">La gráfica de agua muestra niveles de consumo eficientes, moderados o excesivos, promoviendo un uso consciente del recurso.</p>.
     </div>
 </div>
 
 <div class="two-graphs">
     @yield('graph2')
     <div>
-       <p class="info graphs"> Información gráfico.</p>
+       <p class="info graphs">La gráfica de luz indica niveles de consumo eficientes, moderados o excesivos, fomentando prácticas energéticamente responsables.</p>
     </div>
 </div>
     </main>

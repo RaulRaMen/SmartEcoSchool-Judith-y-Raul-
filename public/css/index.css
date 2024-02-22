@@ -5,7 +5,7 @@
 
 /*Página agua*/
 .bodyagua {
-    background: linear-gradient(70deg, rgb(160, 211, 155),rgb(123, 219, 231));
+    background: linear-gradient(70deg, rgb(0, 0, 0),rgb(69, 228, 223));
 }
 
 .bodyElect {
@@ -101,6 +101,84 @@ h2 {
     text-shadow: 5px 1px 2px rgb(0, 0, 0);
 }
 
+.circulo
+{
+
+margin-top: 3vh;
+margin-left: 47vh;
+
+}
+
+.texto3
+{
+
+margin-top: 3vh;
+
+}
+
+/*Página agua2*/
+
+
+
+
+.bodyagua2 {
+    background-color: #87CEEB; /* Azul claro, evoca el color del agua */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.headeragua2 {
+    background-color: #4682B4; /* Azul oscuro para el encabezado */
+    text-align: center;
+    font-size: 2em;
+    width: 80%;
+    border-radius: 2em;
+    border: solid 3px black;
+    margin-inline-start: 6em;
+    text-shadow: 0 0 30px #fff;
+    margin-top: 1em;
+}
+
+.tituloElect {
+    margin: 0;
+}
+
+.main {
+    padding: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.circulo {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    margin-left: 43vh;
+}
+
+.texto3 {
+    text-align: center;
+}
+
+.pieagua2 {
+    background-color: #4682B4; /* Azul oscuro para el pie de página */
+    height: 70px;
+    line-height: 50px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-family: fantasy;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+
 
 
 /*Página electricidad*/
@@ -151,10 +229,9 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-   margin-top: 5em;
-   margin-left: 30em;
-   border: solid 2px black;
-   box-shadow: 0 0 20px rgb(255, 251, 8);
+   margin-top: -2em;
+   margin-left: 17em;
+  
 }
 
 /*imagenes*/
@@ -178,7 +255,7 @@ img {
     box-sizing: border-box; /* Incluir el padding en el ancho total */
     vertical-align: top; /* Alinear los divs en la parte superior */
     margin: 10em; /* Espacio entre los divs */
-    margin-left: 20em;
+    margin-left: 30vh;
     height: auto;
     margin-top: 2em;
    
@@ -188,7 +265,9 @@ img {
 .info.graphs {
     text-align: center; /* Centrar el texto horizontalmente */
     margin: 0; /* Eliminar márgenes predeterminados */
-    margin-right: -6em;
+    margin-left: -9vh;
+    font-size: 2.2vh;
+    width: 230%; /* Ancho del contenedor */
 }
 
 
@@ -197,15 +276,28 @@ img {
 }
 
 .grafico2 p {
-    margin-top: 20px; /* Espacio superior para separar el texto del gráfico */
+    margin-top: 50px; /* Espacio superior para separar el texto del gráfico */
 }
 
-.texto1
+.texto1 {
+    color: #f0f8ff; /* Color de texto */
+    margin-top: 10px; /* Espacio superior */
+    font-size: 2.5vh; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    width: 75%; /* Ancho del contenedor */
+    text-align: center; /* Alineación centrada */
+    margin-top: -9vh;
+    transform: translateY(-50%); /* Centrado vertical */
+    margin-left: 23vh;
+    text-shadow: none;
+   
+}
+
+.texto2
 {
 
-    color: aliceblue;
-    margin-top: -3em;
-    font-size: 2em;
-
+    margin-top: 15vh;
 
 }
+
+

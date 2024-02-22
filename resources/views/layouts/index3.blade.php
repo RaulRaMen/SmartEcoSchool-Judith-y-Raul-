@@ -8,22 +8,25 @@
     <title>Electrico</title>
 </head>
 
-<body class="bodyElect">
-    <header class="headerElect">
+<body class="bodyagua2">
+    <header class="headeragua2">
         <h1 class="tituloElect">SmartEcoSchool</h1>
     </header>
 
     <main class="main">
         <div class="center">
             <h1>@yield('graphTitle')</h1>
-            @yield('text')
+           
         </div>
         <div class="circulo">
             @yield('graph')
         </div>
     </main>
 
-    <footer class="pieElect">
+
+    <p class="texto3" > @yield('text')</p>
+
+    <footer class="pieagua2">
         <img src="{{asset('/img/logoRincon.png')}}"></img>
         <h2>SmartEcoSchool</h2>
     </footer>
