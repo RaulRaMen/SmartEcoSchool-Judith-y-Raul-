@@ -17,7 +17,6 @@
         let ming = 13298000;
 
         function intervalo(int){
-            console.log (ming + ((maxg-ming)*int));
             return ming + ((maxg-ming)*int);
         }
 

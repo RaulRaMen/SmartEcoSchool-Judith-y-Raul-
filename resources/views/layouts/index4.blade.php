@@ -18,7 +18,9 @@
             <h1>@yield('graphTitle')</h1>
             @yield('text')
         </div>
-
+        <div class="circulo">
+            @yield('graph')
+        </div>
 </div>
     </main>
 
