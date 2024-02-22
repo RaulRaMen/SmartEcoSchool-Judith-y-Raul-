@@ -52,9 +52,9 @@
     }
 
 </script>
-<div id="chart_div">
+<div id="chart_div" class="contador">
 
-<div id="chart_div" style="width: 900px; height: 500px;"></div>
+<div class="contador" style="width: 900px; height: 500px;"></div>
 </div>
 @endsection
 
@@ -113,7 +113,7 @@
         }, 14000);
     
 </script>
-<div id="chart_div2">
+<div id="chart_div2" class="contador">
 <div id="chart_div" style="width: 900px; height: 500px;"></div>
 
 </div>

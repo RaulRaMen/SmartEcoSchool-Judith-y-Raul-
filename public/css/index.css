@@ -300,4 +300,43 @@ img {
 
 }
 
+.texto4
+{
 
+    margin-top: 8vh;
+}
+
+
+   /* #chart_div {
+        background-color: #DDD;
+      }
+      
+      #chart_div text {
+        font-family: Arial, sans-serif;
+      }
+      
+      #chart_div path {
+        stroke-width: 2px;
+      }
+      
+      #chart_div text {
+        fill: black;
+      }
+      
+      #chart_div text {
+        font-size: 12px;
+      }
+      
+      #chart_div path {
+        stroke: white;
+      }
+      
+      #chart_div g path {
+        filter: url(#shadow);
+      }
+      */
+      .contador text {
+        font-size: 20px;
+      }
+      
+      

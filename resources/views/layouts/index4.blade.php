@@ -16,7 +16,7 @@
     <main class="main">
         <div class="center">
             <h1>@yield('graphTitle')</h1>
-            @yield('text')
+           
         </div>
         <div class="circulo">
             @yield('graph')
@@ -28,6 +28,8 @@
         <img src="{{asset('/img/logoRincon.png')}}"></img>
         <h2>SmartEcoSchool</h2>
     </footer>
+
+    <p class="texto4">  @yield('text')</p>
 </body>
 
 </html>

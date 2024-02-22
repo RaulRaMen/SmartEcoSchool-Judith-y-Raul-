@@ -53,15 +53,17 @@ class IndexController extends Controller
 
                                 break;
                         case 4:
-                                $viewData['graphsTitle'] = 'uwu';
-                                $viewData['text'] = 'Estamos en el index 4';
+                                $viewData['graphsTitle'] = 'Consumo total anual';
+                                $viewData['text'] = 'Mostramos todo lo que se ha consumido durante un año';
 
                                 $query = DB::select("SELECT m.id_sensor, m.consumo, YEAR(m.fecha) AS fecha FROM measurements m INNER JOIN ( SELECT MAX(fecha) AS ultima_fecha FROM measurements 
-                                WHERE id_sensor = 2 GROUP BY YEAR(fecha) ) AS ultimas_fechas ON m.fecha = ultimas_fechas.ultima_fecha WHERE m.id_sensor = 2 ORDER BY m.fecha DESC;");
+                                WHERE id_sensor = 2 GROUP BY YEAR(fecha) ) AS ultimas_fechas ON m.fecha = ultimas_fechas.ultima_fecha WHERE m.id_sensor = 2 ORDER BY m.fecha ASC;");
                                 $base=0;
                                 foreach ($query as $data){
+                                       
                                         $base = $data->consumo-$base;
                                         $viewData['data']['agua'][] = [$base,$data->fecha];
+
                                 };
                                 break;
                         
