@@ -103,14 +103,13 @@
   lineWidth: 2, // Grosor de la línea del gráfico
   curveType: 'function' // Tipo de curva (opciones: 'none', 'function', 'linear', 'polynomial', 'exponential')
 };
-
-
-
-
         let chart = new google.charts.Scatter(document.getElementById('scatterchart_material'));
 
         chart.draw(data, google.charts.Scatter.convertOptions(options));
       }
+      setInterval(function() {
+        window.location.replace("http://localhost:8000/index/3");
+        }, 14000);
     </script>
 <div id="scatterchart_material" style="width: 900px; height: 500px;"></div>
 @endsection

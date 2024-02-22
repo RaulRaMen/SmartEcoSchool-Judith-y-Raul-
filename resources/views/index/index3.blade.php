@@ -34,7 +34,9 @@
 
         chart.draw(data, options);
       }
-    </script>
+      setInterval(function() {
+        window.location.replace("http://localhost:8000/index/4");
+        }, 14000);
     </script>
     <div id="curve_chart" style="width: 900px; height: 500px"></div>
 @endsection

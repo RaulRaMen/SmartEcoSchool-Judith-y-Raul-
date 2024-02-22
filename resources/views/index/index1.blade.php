@@ -73,7 +73,6 @@
         let ming = 53695000;
 
         function intervalo(int){
-            console.log (ming + ((maxg-ming)*int));
             return ming + ((maxg-ming)*int);
         }
 
@@ -108,6 +107,11 @@
         chart.draw(data, options);
         }, 10000);
     }
+
+    setInterval(function() {
+        window.location.replace("http://localhost:8000/index/2");
+        }, 14000);
+    
 </script>
 <div id="chart_div2">
 <div id="chart_div" style="width: 900px; height: 500px;"></div>

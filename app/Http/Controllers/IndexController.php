@@ -56,33 +56,13 @@ class IndexController extends Controller
                                 $viewData['graphsTitle'] = 'uwu';
                                 $viewData['text'] = 'Estamos en el index 4';
 
-                                $query = DB::select("SELECT  m.id_sensor,  m.consumo,  m.fecha FROM measurements m INNER JOIN ( SELECT MAX(fecha) AS ultima_fecha FROM measurements 
-                                WHERE id_sensor = 1 GROUP BY YEARWEEK(fecha) ) AS ultimas_fechas ON m.fecha = ultimas_fechas.ultima_fecha WHERE m.id_sensor = 1 ORDER BY m.fecha DESC;");
-
-                                foreach ($query as $data) $viewData['data'][] = [$data->consumo,$data->fecha];
-                                
-                                //----------------------------------
-
                                 $query = DB::select("SELECT m.id_sensor, m.consumo, YEAR(m.fecha) AS fecha FROM measurements m INNER JOIN ( SELECT MAX(fecha) AS ultima_fecha FROM measurements 
-                                WHERE id_sensor = 1 GROUP BY YEAR(fecha) ) AS ultimas_fechas ON m.fecha = ultimas_fechas.ultima_fecha WHERE m.id_sensor = 1 ORDER BY m.fecha DESC;");
-
-                                foreach ($query as $data) $viewData['data1'][] = [$data->consumo,$data->fecha];
-                                
-                                //----------------------------------
-
-                                $query = DB::select("SELECT m.id_sensor, m.consumo, CONCAT(YEAR(m.fecha), '-', LPAD(MONTH(m.fecha), 2, '0')) AS fecha FROM measurements m INNER JOIN ( SELECT MAX(fecha) AS ultima_fecha 
-                                FROM measurements WHERE id_sensor = 1 GROUP BY YEAR(fecha), MONTH(fecha) ) AS ultimas_fechas ON m.fecha = ultimas_fechas.ultima_fecha WHERE m.id_sensor = 1 ORDER BY m.fecha DESC;");
-
-                                foreach ($query as $data) $viewData['data2'][] = [$data->consumo,$data->fecha];
-                                
-                                //----------------------------------
-
-                                $query = DB::select("SELECT m.id_sensor, m.consumo, YEAR(m.fecha) AS fecha FROM measurements m INNER JOIN ( SELECT MAX(fecha) AS ultima_fecha FROM measurements WHERE id_sensor = 2 
-                                GROUP BY YEAR(fecha) ) AS ultimas_fechas ON m.fecha = ultimas_fechas.ultima_fecha WHERE m.id_sensor = 2 ORDER BY m.fecha DESC;");
-
-                                foreach ($query as $data) $viewData['data3'][] = [$data->consumo,$data->fecha];
-
-                                
+                                WHERE id_sensor = 2 GROUP BY YEAR(fecha) ) AS ultimas_fechas ON m.fecha = ultimas_fechas.ultima_fecha WHERE m.id_sensor = 2 ORDER BY m.fecha DESC;");
+                                $base=0;
+                                foreach ($query as $data){
+                                        $base = $data->consumo-$base;
+                                        $viewData['data']['agua'][] = [$base,$data->fecha];
+                                };
                                 break;
                         
                 }
